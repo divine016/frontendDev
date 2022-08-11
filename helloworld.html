@@ -1,0 +1,79 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script language="javascript" type="text/javascript">
+          //writing hello world
+          // document.write("hello world");
+            let cars = ["toyota", "rangerover", "volvo"];
+            //declaring  an array and using getelementsbyid to acess the value of the array
+            // document.getElementById("demo").innerHTML = cars;
+            let toyota = cars[0];
+            document.getElementById("demo").innerHTML = toyota;
+            let len = cars.length;
+            document.getElementById("demo").innerHTML = len;
+            //accessing the last element of the array.
+            let last = cars[cars.length -1];
+            document.getElementById("demo").innerHTML = last;
+            
+            cars.forEach((item, index, array,) =>{console.log(item, index);});
+
+            document.getElementById("demo").innerHTML = cars.toString();
+            
+            let last1 = cars.pop();
+            document.getElementById("demo").innerHTML = last1;
+
+            let last2 = cars[cars.length -1];
+            console.log(last2);
+            
+            cars.push("audit");
+            document.getElementById("demo").innerHTML = cars;
+            //sift assert
+            cars.shift();
+            document.getElementById("demo").innerHTML = cars;
+            //unshift method to addd somthing infront of array
+            cars.unshift("hybrid") ;
+            document.getElementById("demo").innerHTML = cars;
+
+            //concat to merge two arrays
+            let moto =[ "years" , "moto", "wtaer"]
+            let vehicles = cars.concat(moto);
+            document.getElementById("demo").innerHTML = vehicles;
+
+            //sort method used to sort array into accending orthe
+            vehicles.sort();
+            document.getElementById("demo").innerHTML = vehicles;
+             
+            // reverse method is used to reverse elemnts in an aceending orther
+            vehicles.reverse();
+            document.getElementById("demo").innerHTML = vehicles;
+            //mapping in js
+
+            let num1 = [2, 2, 3, 4, 5, 6];
+            let num2 = num1.map(multiply);
+            function multiply(value){
+                return value * 2
+            }
+            document.getElementById("demo").innerHTML = num2;
+
+            
+            let num3 = num1.filter(comp);
+            function comp(value){
+                return value>4;
+            }
+            document.getElementById("demo").innerHTML = num3;
+            //reduces an array if values to one value does not reduce to original  array
+            let num4 = num1.reduce(sum);
+            function sum(total, value){
+                return total+value;
+            }
+            document.getElementById("demo").innerHTML = num4;
+
+            // -----------------------------loops--------------
+            
+
+
+            
+            
+        </script>
+    </body>
+</html>
